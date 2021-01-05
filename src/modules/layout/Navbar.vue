@@ -5,13 +5,12 @@
 
       <v-toolbar-title @click="$router.push({ name: 'home' })">
         <v-avatar size="40px">
-          <img src="@/assets/logo.jpg" alt="logo" height="50px" />
+          <img src="@/assets/logo.jpg" alt="logo" height="100%" width="100%" />
         </v-avatar>
-
-        GDG Bahir Dar</v-toolbar-title
-      >
+        <span class="d-none d-md-inline-block mx-2">GDG Bahir Dar</span>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
-      <div>
+      <div class="mx-2">
         <v-text-field
           label="Search"
           prepend-inner-icon="mdi-magnify"
@@ -27,7 +26,7 @@
 
       <v-btn
         text
-        class="text-capitalize"
+        class="text-capitalize d-none d-md-block"
         v-for="menu in menus"
         :key="menu.title"
         @click="$router.push({ name: menu.route })"
